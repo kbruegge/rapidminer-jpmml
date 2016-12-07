@@ -7,6 +7,11 @@
       <name>Read PMML</name>
     </operator>
 
+    <operator>
+        <key>default_confidence_learner</key>
+        <name>Defaul Confidence Learner</name>
+    </operator>
+
 
     <!-- This is how group keys are translated: -->
 

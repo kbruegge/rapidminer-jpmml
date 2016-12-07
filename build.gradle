@@ -1,22 +1,24 @@
 buildscript {
-	repositories {
-	    jcenter()
-		maven { url 'https://maven.rapidminer.com/content/groups/public/' }
-	}
+    repositories {
+        mavenCentral()
+        jcenter()
+        maven { url 'https://maven.rapidminer.com/content/groups/public/' }
+    }
 }
 
 plugins { id 'com.rapidminer.extension' version '0.8.2' }
 
 // Define Maven artifact repositories
 repositories {
+    mavenCentral()
     jcenter()
-	maven { url 'https://maven.rapidminer.com/content/groups/public/' }
+    maven { url 'https://maven.rapidminer.com/content/groups/public/' }
 }
 
 extensionConfig {
 
     // The extension name
-    name 'Template'
+    name = 'pmmlevaluator'
 
     /*
      * The artifact group which will be used when publishing the extensions Jar
@@ -24,7 +26,7 @@ extensionConfig {
      *
      * It is 'com.rapidminer.extension' by default.
      */
-    //groupId = 'com.rapidminer.extension'
+    groupId = 'de.woistbier.rapidminer.pmml'
 
     /*
      * The extension vendor which will be displayed in the extensions about box
@@ -32,7 +34,7 @@ extensionConfig {
      *
      * It is 'RapidMiner GmbH' by default.
      */
-    //vendor = "RapidMiner GmbH"
+    vendor = "Kai Brügge"
 
     /*
      * The vendor homepage which will be displayed in the extensions about box
@@ -40,7 +42,7 @@ extensionConfig {
      *
      * It is 'www.rapidminer.com' by default.
      */
-    //homepage = "www.rapidminer.com"
+    homepage = "github.com/mackaiver"
 
     // define RapidMiner version and extension dependencies
     dependencies {
@@ -51,5 +53,5 @@ extensionConfig {
 
 // Define third party library dependencies
 dependencies {
-	//compile 'com.google.guava:guava:18.0'
+    compile 'org.jpmml:pmml-evaluator:1.3.3'
 }

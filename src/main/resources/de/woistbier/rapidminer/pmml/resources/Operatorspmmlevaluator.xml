@@ -9,6 +9,11 @@
               <key>pmml_evaluator</key>
               <class>de.woistbier.rapidminer.pmml.operator.PMMLEvaluator</class>
            </operator>
+
+            <operator>
+                <key>default_confidence_learner</key>
+                <class>de.woistbier.rapidminer.pmml.operator.ConfidenceDefaultLearner</class>
+            </operator>
          </group>
 
     </group>
